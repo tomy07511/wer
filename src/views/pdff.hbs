@@ -1,0 +1,132 @@
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.8.0/html2pdf.bundle.min.js" integrity="sha512-w3u9q/DeneCSwUDjhiMNibTRh/1i/gScBVp2imNVAMCt6cUHIw6xzhzcPFIaL3Q1EbI2l+nu17q2aLJJLo4ZYg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+                                            
+
+
+                                        <!DOCTYPE html>
+                                        <html>
+                                        <head>
+                                            <title>Poema</title>
+                                            <style>
+                                                .content-wrapper {
+                                                    text-align: center;
+                                                }
+
+                                                .poem {
+                                                    font-size: 20px;
+                                                    line-height: 1.5;
+                                                    margin-top: 50px;
+                                                    margin-left: -300px;
+                                                }
+                                            </style>
+                                        </head>
+                                        <body>
+                                            
+                                        <div id="sopa">
+                                            
+
+                                                                    <div class="wrapper">
+
+                                                                    <!-- Content Wrapper. Contains page content -->
+                                                                    <div class="content-wrapper">
+                                                                        <!-- Content Header (Page header) -->
+                                                                        <h1 class="m-0 text-dark"> Sistema fotovoltaico conectado a red <small> (Luxmeter)</small></h1>
+                                                                        
+                                                                        
+                                
+                                                                    <div class="wrapper">
+                                                                        <div class="content-wrapper">
+                                                                            <h1></h1>
+
+                                            
+                                                                            <div class="poem">
+                                                                                <script>
+                                                                                    var resultado = localStorage.getItem('resultado');
+                                                                                document.write("El numero de paneles necesario es :"+resultado+"\n");
+                                                                                </script>
+                                                                            </div>
+                                                                            
+                                                                            <div class="poem">    
+                                                                                <script>   
+                                                                                    var HSP = localStorage.getItem('HSP');
+                                                                                document.write("Su hora solar pico es :"+HSP+"KWh/m2\n");
+                                                                                </script>
+                                                                            </div>
+
+                                                                            <div class="poem">    
+                                                                                <script>   
+                                                                                    var promediomes = localStorage.getItem('promediomes');
+                                                                                document.write("Su gasto promedio cada mes es:"+promediomes+"Kw\n");
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="poem">    
+                                                                                <script>   
+                                                                                    var promediodias = localStorage.getItem('promediodias');
+                                                                                document.write("Su gasto promedio cada dia es:"+promediodias+"w\n");
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="poem">    
+                                                                                <script>   
+                                                                                    var watts = localStorage.getItem('watts');
+                                                                                document.write("Watts producidos :"+watts+"w\n");
+                                                                                </script>
+                                                                            </div>
+                                                                            <div class="poem">    
+                                                                                <script>   
+                                                                                    var inversor = localStorage.getItem('inversor');
+                                                                                document.write("Necesita un inversor de almenos :"+inversor+"w\n");
+                                                                                </script>
+                                                                            </div>
+                                            </div>                                   
+                                                                        
+                                                                            
+                                                                      <div class="poem">    
+                                                                       <button style="padding: 10px;" id="exportPDF">Descargar PDF</button>
+                                                                    </div>
+                                                                        
+                                                                        </div>
+                                                                
+                                                                    </div>
+                                                                        </div>
+                                                                            <!-- /.col-md-6 -->
+                                                                            </div>
+                                                                            <!-- /.row -->
+                                                                        </div><!-- /.container-fluid -->
+                                                                        </div>
+                                                                        <!-- /.content -->
+                                                                    </div>
+                                                                <!-- /.content-wrapper -->
+                                                                    
+                                                                    <!-- Control Sidebar -->
+                                                                    <aside class="control-sidebar control-sidebar-dark">
+                                                                        <!-- Control sidebar content goes here -->
+                                                                        <div class="p-3">
+                                                                        <h5>Title</h5>
+                                                                        <p>Sidebar cossssntent</p>
+                                                                        </div>
+                                                                    </aside>
+                                                                    <!-- /.control-sidebar -->
+
+
+                                                                    </div>
+                                                                    <!-- ./wrapper -->
+                                            
+                                                                 
+                                            
+                                            
+                                             <script>
+                                                    let htmlPDF =  document.getElementById("sopa");
+                                                    let exportPDF =  document.getElementById("exportPDF");
+                                                    exportPDF.onclick = (e)=> html2pdf(htmlPDF)
+                                             </script>
+                                                                                    
+                                        </body>
+                                          
+
+                                        </html>
+
+              
+                        
+
+         
+   
